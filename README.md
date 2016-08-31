@@ -5,7 +5,7 @@ another charm.
 
 # Usage
 
-The interface provides the `service-control.connected` state.
+The interface provides the `{relation-name}.connected` state.
 
 Requesting a restart of all remote services:
 
@@ -25,7 +25,7 @@ def configure(service_control):
     service_control.request_restart(service_type='neutron')
 ```
 
-# metadata
+# Metadata
 
 To consume this interface in your charm or layer, add the following to
 `layer.yaml`:
@@ -34,7 +34,7 @@ To consume this interface in your charm or layer, add the following to
 includes: ['interface:service-control']
 ```
 
-and add a provides interface of type `service-control` to your charm or layers
+and add a requires interface of type `service-control` to your charm or layers
 `metadata.yaml` eg:
 
 ```yaml
