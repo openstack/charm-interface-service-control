@@ -1,0 +1,3 @@
+name: neutron-control
+summary: Interface for requesting restarts of neutron services
+maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
