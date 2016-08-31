@@ -7,6 +7,24 @@ another charm.
 
 The interface provides the `service-control.connected` state.
 
+Requesting a restart of all remote services:
+
+```python
+@reactive.when('service-control.connected')
+def configure(service_control):
+    ...
+    service_control.request_restart()
+```
+
+Requesting a restart of a specific type of remote services:
+
+```python
+@reactive.when('service-control.connected')
+def configure(service_control):
+    ...
+    service_control.request_restart(service_type='neutron')
+```
+
 # metadata
 
 To consume this interface in your charm or layer, add the following to
