@@ -1,0 +1,34 @@
+# Overview
+
+This interface is used for a charm to request a restart of a service managed by
+another charm.
+
+# Usage
+
+The interface provides the `service-control.connected` state.
+
+# metadata
+
+To consume this interface in your charm or layer, add the following to
+`layer.yaml`:
+
+```yaml
+includes: ['interface:service-control']
+```
+
+and add a provides interface of type `service-control` to your charm or layers
+`metadata.yaml` eg:
+
+```yaml
+requires:
+  neutron-control:
+    interface: service-control
+```
+
+# Bugs
+
+Please report bugs on
+[Launchpad](https://bugs.launchpad.net/openstack-charms/+filebug).
+
+For development questions please refer to the OpenStack [Charm
+Guide](https://github.com/openstack/charm-guide).
