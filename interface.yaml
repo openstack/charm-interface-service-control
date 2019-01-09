@@ -1,3 +1,10 @@
 name: service-control
 summary: Interface for requesting restarts of services
 maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
+ignore:
+  - 'unit_tests'
+  - '.stestr.conf'
+  - 'test-requirements.txt'
+  - 'tox.ini'
+  - '.gitignore'
+  - '.zuul.yaml'

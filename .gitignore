@@ -1,0 +1,5 @@
+.tox
+.stestr
+*__pycache__*
+*.pyc
+.unit-state.db
